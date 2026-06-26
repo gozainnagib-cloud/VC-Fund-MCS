@@ -1,12 +1,22 @@
 # Venture Fund Monte Carlo Simulator
 
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Tests](https://img.shields.io/badge/Tests-Pytest-0A7EA4)](https://docs.pytest.org/)
+
 An institutional-style VC analytics dashboard that models how portfolio construction, ownership, dilution, reserves, and power-law outcomes shape venture fund returns.
 
-The project is built as a local Streamlit app with a tested Python simulation engine. It uses synthetic assumptions only. No API keys, paid datasets, market-data feeds, private VC databases, or external authentication are required.
+**Live app:** [vc-fund-mcs.streamlit.app](https://vc-fund-mcs.streamlit.app)  
+**Project memo:** [docs/project_memo.md](docs/project_memo.md)  
+**Status:** Public portfolio project using synthetic assumptions only. No API keys, paid datasets, market-data feeds, private VC databases, or external authentication are required.
 
 ## Core Question
 
 How do fund construction decisions change the probability that a venture fund returns capital, clears a 3x target, or becomes dependent on one breakout company?
+
+## Why This Project Exists
+
+Venture returns are dominated by rare outcomes, so averages alone can be misleading. This simulator turns VC portfolio construction into an auditable probabilistic model: users can change ownership, dilution, reserve policy, portfolio size, follow-on quality, and outlier rates to see how fund-level TVPI, downside risk, and winner dependency move.
 
 ## What A Recruiter Should Notice
 
@@ -105,6 +115,10 @@ vc_fund_sim/strategies.py Strategy archetype comparison
 tests/                    Unit tests for simulation, presets, sensitivity, and strategy logic
 docs/project_memo.md      Finance memo explaining the model and caveats
 ```
+
+## What This Is Not
+
+This is not a real fund model, cash-flow waterfall, or investment recommendation engine. It does not claim to predict startup outcomes. The goal is to demonstrate quantitative thinking, VC portfolio intuition, and product-quality communication in a clean public project.
 
 ## Caveats
 
